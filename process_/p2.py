@@ -2,7 +2,7 @@
 生成1000个随机4位验证码（由字母和数字组成）
 每间隔2秒中读取一次验证码（统计验证码的数量）
 '''
-
+import re
 from multiprocessing import Process, current_process
 import os
 import string
@@ -30,18 +30,26 @@ def random_verify_code(total_cnt=1000, length=4, file_path=None):
             with open(file_path, 'a') as f:
                 f.write(verify_code+'\n')
 
-            time.sleep(0.5)
+            time.sleep(0.1)
 
     # current_process() 获取当前进程的对象
     print(current_process().name, current_process().pid, '-生成任务完成--')
 
 
 def count_verfiy_code(delta=2, file_path=None):
+    time.sleep(1)
     if file_path is not None:
+        last_lines = 0
         while True:
             # 统计指定文件的代码行数  wc
             r = os.popen('cat %s |wc -l' % file_path)
-            print(r.read())  # 读取命令的结果
+            lines = r.read()
+            lines = int(re.findall(r'\d+', lines)[0])
+            print(lines, last_lines)
+            if lines == last_lines:  # 比较的类型保持一致
+                break
+            print(lines)  # 读取命令的结果
+            last_lines = lines
             time.sleep(delta)
 
             # 什么时候停止:
