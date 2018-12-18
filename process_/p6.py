@@ -1,15 +1,16 @@
+import os
+import re
+import time
 import uuid
 from multiprocessing import Process, Queue
 
-import time
 from requests import request
-import os
-import re
 
 from process_.p4 import IMG_DIR
 
 
 def spider_img(url, queue: Queue):  # 爬虫网页下载图片
+
     print('-->开始爬取：', url)
     resp = request('get', url)
     html = resp.text
@@ -25,7 +26,13 @@ def spider_img(url, queue: Queue):  # 爬虫网页下载图片
         print('下载%s 完成' % img_url)
         time.sleep(1)
 
-    print('')
+    # 获取推荐related-post == xpath
+    # related_div = re.findall(r'<div class="item">href="(.*?)"', html)
+    related_id = re.findall(r'<a href="http://www.meinv.hk/\?p=(\d+?)"', html)
+    related_id = set(related_id)
+    related_urls = ["http://www.meinv.hk/?p=%s" % id_ for id_ in related_id ]
+    for url_ in related_urls:
+        spider_img(url_, queue)
 
 
 def pipeline(queue: Queue):  # 保存图片
@@ -37,7 +44,7 @@ def pipeline(queue: Queue):  # 保存图片
                 # os.makedirs()
                 os.mkdir(dir_)
 
-            with open(os.path.join(dir_, uuid.uuid4().hex+'.jpg'), 'wb') as f:
+            with open(os.path.join(dir_, uuid.uuid4().hex + '.jpg'), 'wb') as f:
                 f.write(bytes)
 
             print('-保存图片--', url)
