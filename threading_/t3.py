@@ -2,7 +2,6 @@
 多线程共享进程的内存
 通过Lock锁 解决一致性 问题：
     每一个线程操作的共享变量 "可能" 不一致
-
 '''
 from threading import Thread, current_thread, Lock
 
