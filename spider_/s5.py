@@ -5,8 +5,7 @@
 
 2. 针对data数据进行 urlencode编码
 
-需求： 百度翻译 'https://fanyi.baidu.com/transapi'
-
+需求： 百度详细翻译   'https://fanyi.baidu.com/v2transapi'
 """
 import json
 from urllib.request import Request, urlopen
@@ -24,7 +23,7 @@ headers = {
     'Cookie': 'BAIDUID=735509FECFADE32D9D0690BB937D157A:FG=1'
 }
 
-url = 'https://fanyi.baidu.com/transapi'
+url = 'https://fanyi.baidu.com/v2transapi'
 
 
 def main(word, from_lang, to_lang):
@@ -33,7 +32,12 @@ def main(word, from_lang, to_lang):
         'from': from_lang,
         'to': to_lang,
         'query': word,
-        'source': 'txt'
+        # 'query': quote(word) if from_lang == 'zh' else word,
+        'transtype': 'realtime',
+        'simple_means_flag': 3,
+        # 'sign': '663039.982734',
+        'sign': '551517.821612',   # 注意： 签名是根据不同关键，生成的
+        'token': '1be64b2e8ec5e7476c63702005614af2'
     }
 
     # 生成post请求， data 是字典还是 from=en&to=zh格式？
@@ -55,4 +59,4 @@ def main(word, from_lang, to_lang):
 
 
 if __name__ == '__main__':
-    main('python', 'en', 'zh')
+    main('美女', 'zh', 'en')
