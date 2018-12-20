@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hi</title>
+</head>
+<body>
+
+<h1>
+    Hi, 千锋翻译
+</h1>
+<hr>
+<button onclick="query(keyword.value)">翻译</button><br>
+<textarea id="keyword" rows="5" cols="20" name="keyword"></textarea>
+
+<div>
+    <span>查询结果</span>
+    <div id="result_div">
+    </div>
+</div>
+<script>
+    function query(txt) {
+        console.log(txt);
+        // 判断是否为汉字
+
+        var from = '';
+        var to = '';
+        reg = /^[\u4e00-\u9fa5]+$/
+        if (reg.test(txt)){
+            alert('是中文 zh');
+            from = 'zh';
+            to = 'en';
+        }else if (/^[a-zA-Z]+$/.test(txt)){
+            alert('是英文 en')
+            from = 'en';
+            to = 'zh';
+        }else{
+            alert('请输入中文或英文')
+            return;
+        }
+
+        var formdata = new FormData()
+        formdata.append('keyword', txt);
+        formdata.append('from', from);
+        formdata.append('to', to);
+
+        request = new XMLHttpRequest();
+        request.open('POST', '/translate/', true)
+        request.onload= function (ev) {
+            if (request.status == 200 && request.readyState==4){
+                console.log('ok');
+                // console.log(request.responseText);
+
+                result_json = JSON.parse(request.responseText);
+                result = JSON.parse(result_json.result)
+                console.log(result);
+                means = result.content[0].mean
+
+                result_div = document.getElementById('result_div')
+                result_div.innerHTML = '';
+                for(var i=0;i<means.length;i++){
+                    cont = means[i].cont;
+                    cont_keys  = Object.keys(cont)
+                    console.log(cont_keys);
+
+                    for(var j=0; j<cont_keys.length; j++){
+                         divCont = document.createElement('div')
+                         divCont.innerHTML = '<span>'+cont_keys[j]+"</span>"
+                         result_div.appendChild(divCont)
+                    }
+
+                }
+            }
+        }
+
+        request.send(formdata);  // 发起请求
+
+    }
+</script>
+</body>
+</html>

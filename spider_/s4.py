@@ -27,7 +27,7 @@ headers = {
 url = 'https://fanyi.baidu.com/transapi'
 
 
-def main(word, from_lang, to_lang):
+def query(word, from_lang, to_lang):
     # 表单数据
     data = {
         'from': from_lang,
@@ -49,10 +49,11 @@ def main(word, from_lang, to_lang):
         # json.loads() 是将json格式的字符串转成dict或list -> 反序列化
         json_ = json.loads(resp.read().decode())
         print(json_)
+        return json_
 
     except Exception as e:
         print(e)
 
 
 if __name__ == '__main__':
-    main('python', 'en', 'zh')
+    query('python', 'en', 'zh')
