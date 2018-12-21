@@ -1,5 +1,9 @@
 class BaseDao():
+    def __init__(self, db):
+        self.db = db
+
     def query(self, cls):
+        # select * from 表名
         pass
 
     def query_by_id(self, cls, id):
@@ -24,7 +28,7 @@ class BaseDao():
         sql = sql % (table_name, columns, columns_)
 
         # cursor.execute(sql, tuple(columns_values))
-        print(sql)
+        print(sql, tuple(columns_values))
 
     def update(self, obj):
         pass
