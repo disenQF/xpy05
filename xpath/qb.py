@@ -6,6 +6,7 @@ from http.client import HTTPResponse
 from urllib.request import urlopen, Request
 import csv
 from lxml import etree
+from chardet import detect
 
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
@@ -30,7 +31,10 @@ def start_spider(url):
 
 def parse(resp: HTTPResponse):
     try:
-        html = resp.read().decode()
+        # html = resp.read().decode()
+        html = resp.read()
+        charset = detect(html)
+
     except:
         # 如果网页编码不是utf-8或ISO8859-1，如gbk,gb2312
         # 在响应头中存在-> Content-Type: text/html; charset=UTF-8
