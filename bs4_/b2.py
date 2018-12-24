@@ -2,6 +2,7 @@
 https://www.gushiwen.org/gushi/sanbai.aspx
 基于beautifulSoupr爬取古诗文
 """
+import re
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup, Tag
@@ -41,21 +42,13 @@ def parse(resp):
         # 1. 创建BeautifulSoupc对象
         bs = BeautifulSoup(html, 'lxml')
 
-        # 2. 查询每一个诗词分类
-        # div: Tag = bs.find('div', class_='bookMl')
-        book_mls = bs.find_all('div', class_='bookMl')  # bs4.element.Tag
-        for div in book_mls:
-            print(div.text, div.string, div.contents)
-
-            # 获取所有的兄弟标签( span )
-            for sib in div.next_siblings:  # generator [NavigableString, Tag, None]
-                if isinstance(sib, Tag):
-                    # print(sib.text, sib.find('a').get('href'))
-                    item_pipeline(**{
-                        'type_name': div.text,
-                        'book_name': sib.text,
-                        'book_url': sib.find('a').get('href')
-                    })
+        # 2. 查询所有的a标签
+        as_ = bs.find_all('a')
+        for a_ in as_:  # a_ 是Tag对象
+            # print(a_.text, a_.attrs.get('href'))
+            href = a_.get('href')  # 同a_.attrs.get('href')
+            if re.match(r'https://so.gushiwen.org/shiwenv_\w+?.aspx', href):
+                print('-->', a_.getText(), href)  # 应该将url的请求和回调 存入到Queue队列中
 
     elif content_type.startswith('image/'):
         # 保存图片
