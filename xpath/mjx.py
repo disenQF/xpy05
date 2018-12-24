@@ -125,4 +125,4 @@ if __name__ == '__main__':
     spider_thread.join()
     img_thread.join()
 
-    print('---over---')
+    print('---over---')  # 狄老师： 610039018@qq.com
