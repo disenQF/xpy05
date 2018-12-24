@@ -63,7 +63,7 @@ def parse(resp, q):
             href = a_.get('href')  # 同a_.attrs.get('href')
             if re.match(r'https://so.gushiwen.org/shiwenv_\w+?.aspx', href):
                 print('-->', a_.getText(), href)  # 应该将url的请求和回调 存入到Queue队列中
-                q.put((href, parse_book))
+                q.put((href, parse_book))  # 向任务队列中添加新的下载任务
     elif content_type.startswith('image/'):
         # 保存图片
         pass
@@ -81,11 +81,11 @@ def parse_book(resp, q):  # 第二层网页解析
     if h1:
        title = h1.text
 
-    p: Tag = bs.find('p', class_='source')
+    p: Tag = bs.find('p', class_='source')  # 返回第一个class为source的p标签
     if p:
         source = p.text
 
-    div: Tag = bs.find('div', class_='contson')
+    div: Tag = bs.find('div', class_='contson') # 返回第一个class为contson的div标签
     if div:
         content = div.text
 
@@ -95,7 +95,8 @@ def parse_book(resp, q):  # 第二层网页解析
         'content': content
     })
 
-def item_pipeline(**data):
+
+def item_pipeline(**data):  # 作业：将数据存放到mongodb中(库、集合、文档)
     print(data)
 
 
