@@ -18,5 +18,13 @@ def translate():
     return render_template('translate.html', **locals())
 
 
+@app.route('/update/<id>/', methods=['PUT', 'PATCH'])
+def update(id):
+    print(request.remote_addr, '--开始更新 ---', id)
+    json_data = request.get_json()  # 获取上传的json数据
+    print(json_data)
+    return jsonify({'status': 'ok'})
+
+
 if __name__ == '__main__':
-    app.run()
+    app.run(host='10.12.155.80')
