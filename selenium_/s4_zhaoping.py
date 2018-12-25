@@ -16,12 +16,13 @@ class ZhaoPinSpider(Thread):
         self.driver = webdriver.Chrome()
         # 西安地区  jl=854， kt=3
         # kw 是搜索的岗位名称
-        self.url = 'https://sou.zhaopin.com/?jl=854&kw=%s&kt=3'
+        self.url = 'https://sou.zhaopin.com/?p=%d&jl=854&kw=%s&kt=3'
 
     def start_spider(self):
         # 搜索关键字： python，java, html5
-        for kw in ('python', 'java', 'html'):
-            yield (self.url % kw, self.parse)
+        for kw in ('python', 'java', 'html5'):
+            for page in range(1, 6):
+                yield (self.url % (page, kw), self.parse)
 
     def parse(self, html):
         soup = BeautifulSoup(html, 'lxml')
@@ -55,10 +56,9 @@ class ZhaoPinSpider(Thread):
     def download_middle(self, url, callback):
         self.driver.get(url)
         time.sleep(5)
+
         html = self.driver.page_source
         callback(html)
-
-        # 下一页
 
     def run(self):
         print('---启动Zhaopin爬虫--')
@@ -67,6 +67,7 @@ class ZhaoPinSpider(Thread):
             self.download_middle(url, callback)
 
     def item_pipeline(self, **data):
+        # 将数据写入到mongodb中
         print(data)
 
     def __del__(self):
