@@ -4,6 +4,7 @@ http://www.meinv.hk/
 """
 import time
 from selenium import webdriver
+from selenium.webdriver.remote.webelement import WebElement
 
 chrome = webdriver.Chrome()
 
@@ -15,10 +16,12 @@ var d = document.documentElement.scrollTop = 10000;
 """
 chrome.execute_script(js_script)
 
-load_more = chrome.find_element_by_xpath('//button[@id="fa-loadmore"]')
-print(load_more)
+js_script ="""
+var load_more = document.getElementById('fa-loadmore');
 load_more.click()
-time.sleep(2)
+"""
+
+# 执行加载更多-脚本方式
 chrome.execute_script(js_script)
 time.sleep(2)
 chrome.quit()
