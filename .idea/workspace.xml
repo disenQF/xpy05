@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24630ddc-8cf7-4bf6-9c65-5bb3e4c2575c" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/selenium_/dianping.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/utils/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/utils/mongo_.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/selenium_/s4_zhaoping.py" afterPath="$PROJECT_DIR$/selenium_/s4_zhaoping.py" />
-      <change beforePath="$PROJECT_DIR$/server_/templates/translate.html" afterPath="$PROJECT_DIR$/server_/templates/translate.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,10 +17,12 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/xpy05$t2.coverage" NAME="t2 Coverage Results" MODIFIED="1545103166791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/threading_" />
+    <SUITE FILE_PATH="coverage/xpy05$dianping.coverage" NAME="dianping Coverage Results" MODIFIED="1545732050590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/selenium_" />
     <SUITE FILE_PATH="coverage/xpy05$t5.coverage" NAME="t5 Coverage Results" MODIFIED="1545114106134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/threading_" />
     <SUITE FILE_PATH="coverage/xpy05$s9.coverage" NAME="s9 Coverage Results" MODIFIED="1545294511649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider_" />
     <SUITE FILE_PATH="coverage/xpy05$s3.coverage" NAME="s3 Coverage Results" MODIFIED="1545204665151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider_" />
     <SUITE FILE_PATH="coverage/xpy05$qb.coverage" NAME="qb Coverage Results" MODIFIED="1545363348026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xpath" />
+    <SUITE FILE_PATH="coverage/xpy05$mongo_.coverage" NAME="mongo_ Coverage Results" MODIFIED="1545727864747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/xpy05$mjx.coverage" NAME="mjx Coverage Results" MODIFIED="1545381033472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/xpath" />
     <SUITE FILE_PATH="coverage/xpy05$p1.coverage" NAME="p1 Coverage Results" MODIFIED="1545016861654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/process_" />
     <SUITE FILE_PATH="coverage/xpy05$p4.coverage" NAME="p4 Coverage Results" MODIFIED="1545035007979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/process_" />
@@ -55,7 +59,7 @@
     <SUITE FILE_PATH="coverage/xpy05$t.coverage" NAME="t Coverage Results" MODIFIED="1545216462676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider_" />
     <SUITE FILE_PATH="coverage/xpy05$t3.coverage" NAME="t3 Coverage Results" MODIFIED="1545104034832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/threading_" />
     <SUITE FILE_PATH="coverage/xpy05$s_work1.coverage" NAME="s_work1 Coverage Results" MODIFIED="1545272166438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/spider_" />
-    <SUITE FILE_PATH="coverage/xpy05$s4_zhaoping.coverage" NAME="s4_zhaoping Coverage Results" MODIFIED="1545726613775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/selenium_" />
+    <SUITE FILE_PATH="coverage/xpy05$s4_zhaoping.coverage" NAME="s4_zhaoping Coverage Results" MODIFIED="1545729955117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/selenium_" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -80,7 +84,7 @@
         <entry file="file://$PROJECT_DIR$/selenium_/s1.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="423">
-              <caret line="34" column="23" lean-forward="true" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+              <caret line="34" column="23" lean-forward="false" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -104,7 +108,7 @@
         <entry file="file://$PROJECT_DIR$/selenium_/s3_meinv.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="59">
-              <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+              <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
               <folding>
                 <element signature="e#45#56#0" expanded="true" />
               </folding>
@@ -112,13 +116,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="s4_zhaoping.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="s4_zhaoping.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/selenium_/s4_zhaoping.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="60" column="22" lean-forward="false" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+            <state relative-caret-position="15">
+              <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding>
                 <element signature="e#73#101#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mongo_.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/mongo_.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dianping.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/selenium_/dianping.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+              <folding>
+                <element signature="e#133#144#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -155,6 +181,8 @@
       <find>Python</find>
       <find>180.110.6.1</find>
       <find>123.235.32.36</find>
+      <find>kwargs</find>
+      <find>keyword_opts</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;$1&quot;</replace>
@@ -166,8 +194,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/threading_/t6.py" />
-        <option value="$PROJECT_DIR$/threading_/t7.py" />
         <option value="$PROJECT_DIR$/coroutine_/c1.py" />
         <option value="$PROJECT_DIR$/coroutine_/c2.py" />
         <option value="$PROJECT_DIR$/threading_/t8_pool.py" />
@@ -217,6 +243,8 @@
         <option value="$PROJECT_DIR$/selenium_/s3_meinv.py" />
         <option value="$PROJECT_DIR$/server_/templates/translate.html" />
         <option value="$PROJECT_DIR$/selenium_/s4_zhaoping.py" />
+        <option value="$PROJECT_DIR$/utils/mongo_.py" />
+        <option value="$PROJECT_DIR$/selenium_/dianping.py" />
       </list>
     </option>
   </component>
@@ -283,13 +311,7 @@
             <path>
               <item name="xpy05" type="b2602c69:ProjectViewProjectNode" />
               <item name="xpy05" type="462c0819:PsiDirectoryNode" />
-              <item name="server_" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xpy05" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xpy05" type="462c0819:PsiDirectoryNode" />
-              <item name="server_" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -330,27 +352,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.s4_zhaoping">
-    <configuration name="b4" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bs4_" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="xpy05" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bs4_/b4.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="s1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.dianping">
+    <configuration name="dianping" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -363,7 +366,26 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="xpy05" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/selenium_/s1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/selenium_/dianping.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="mongo_" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="xpy05" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/mongo_.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -427,19 +449,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.b4" />
-      <item index="1" class="java.lang.String" itemvalue="Python.s1" />
-      <item index="2" class="java.lang.String" itemvalue="Python.s2" />
-      <item index="3" class="java.lang.String" itemvalue="Python.s3_meinv" />
-      <item index="4" class="java.lang.String" itemvalue="Python.s4_zhaoping" />
+      <item index="0" class="java.lang.String" itemvalue="Python.s2" />
+      <item index="1" class="java.lang.String" itemvalue="Python.s3_meinv" />
+      <item index="2" class="java.lang.String" itemvalue="Python.s4_zhaoping" />
+      <item index="3" class="java.lang.String" itemvalue="Python.mongo_" />
+      <item index="4" class="java.lang.String" itemvalue="Python.dianping" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.s4_zhaoping" />
-        <item index="1" class="java.lang.String" itemvalue="Python.s3_meinv" />
-        <item index="2" class="java.lang.String" itemvalue="Python.s2" />
-        <item index="3" class="java.lang.String" itemvalue="Python.s1" />
-        <item index="4" class="java.lang.String" itemvalue="Python.b4" />
+        <item index="0" class="java.lang.String" itemvalue="Python.dianping" />
+        <item index="1" class="java.lang.String" itemvalue="Python.s4_zhaoping" />
+        <item index="2" class="java.lang.String" itemvalue="Python.mongo_" />
+        <item index="3" class="java.lang.String" itemvalue="Python.s3_meinv" />
+        <item index="4" class="java.lang.String" itemvalue="Python.s2" />
       </list>
     </recent_temporary>
   </component>
@@ -466,11 +488,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34018987" sideWeight="0.5029338" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Redis Servers" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4074074" sideWeight="0.49706623" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287037" sideWeight="0.49706623" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44444445" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2685185" sideWeight="0.49706623" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2662037" sideWeight="0.49706623" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23076923" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4425817" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -494,12 +516,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34018987" sideWeight="0.5029338" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Redis Servers" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4074074" sideWeight="0.49706623" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287037" sideWeight="0.49706623" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44444445" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2685185" sideWeight="0.49706623" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2662037" sideWeight="0.49706623" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7531645" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23076923" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4425817" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -524,22 +546,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spider_/s7_handler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1232">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider_/s8.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider_/ip.html" />
-    <entry file="file://$PROJECT_DIR$/spider_/ip-xc.html" />
     <entry file="file://$PROJECT_DIR$/spider_/s9.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -787,7 +793,7 @@
     <entry file="file://$PROJECT_DIR$/selenium_/s1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
-          <caret line="34" column="23" lean-forward="true" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+          <caret line="34" column="23" lean-forward="false" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -828,18 +834,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/venv/xpy05/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="577" column="57" lean-forward="false" selection-start-line="577" selection-start-column="30" selection-end-line="577" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/selenium_/s3_meinv.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="59">
-          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
           <folding>
             <element signature="e#45#56#0" expanded="true" />
           </folding>
@@ -856,10 +854,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/selenium_/s4_zhaoping.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="60" column="22" lean-forward="false" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+        <state relative-caret-position="15">
+          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
             <element signature="e#73#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venv/xpy05/lib/python3.6/site-packages/pymongo/mongo_client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="524" column="37" lean-forward="false" selection-start-line="524" selection-start-column="29" selection-end-line="524" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/mongo_.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venv/xpy05/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="788" column="46" lean-forward="true" selection-start-line="788" selection-start-column="46" selection-end-line="788" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venv/xpy05/lib/python3.6/site-packages/selenium/webdriver/remote/switch_to.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-74">
+          <caret line="90" column="20" lean-forward="false" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selenium_/dianping.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding>
+            <element signature="e#133#144#0" expanded="true" />
           </folding>
         </state>
       </provider>

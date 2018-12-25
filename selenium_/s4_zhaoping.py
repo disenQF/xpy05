@@ -9,6 +9,8 @@ from bs4 import BeautifulSoup, Tag
 from selenium import webdriver
 
 
+from utils.mongo_ import db
+
 class ZhaoPinSpider(Thread):
     def __init__(self):
         super().__init__()
@@ -68,7 +70,8 @@ class ZhaoPinSpider(Thread):
 
     def item_pipeline(self, **data):
         # 将数据写入到mongodb中
-        print(data)
+        # print(data)
+        db.jobs.insert(data)
 
     def __del__(self):
         try:
