@@ -1,0 +1,106 @@
+{\rtf1\ansi\ansicpg936\cocoartf1671
+{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;}
+{\colortbl;\red255\green255\blue255;\red251\green2\blue7;}
+{\*\expandedcolortbl;;\cssrgb\c100000\c14913\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww14800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs48 \cf0 \'d2\'bb\'a1\'a2\'bb\'d8\'b9\'cb\'d6\'aa\'ca\'b6\'b5\'e3\
+    1. bs4\'d3\'c3\'b7\'a8\
+		1\'a3\'a9pip install bs4\
+		2) \'cd\'a8\'b9\'fdurllib\'cf\'c2\'d4\'d8\'cd\'f8\'d2\'b3\'a3\'ac\'bd\'e2\'c2\'eb\'b2\'a2\'b5\'c3\'b5\'bd\'d2\'b3\'c3\'e6\'b5\'c4\'ce\'c4\'b1\'be\'d0\'c5\'cf\'a2 hmtl\
+		3) from bs4 import BeautifulSoup\
+		4) soup = BeautifulSoup(html, \'a1\'aelxml\'a1\'af)\
+		5) soup \'ca\'c7\'b8\'f9\'d4\'aa\'cb\'d8\'b6\'d4\'cf\'f3\'a3\'ac\'cd\'a8\'b9\'fd\'cf\'e0\'b9\'d8\'b5\'c4\'b7\'bd\'b7\'a8\'c0\'b4\'bb\'f1\'c8\'a1\'cb\'fc\'b5\'c4\'d7\'d3\'cb\'ef\'bd\'da\'b5\'e3 Tag\'a1\'a3\
+			5.1)  soup.find(\'a1\'ae\'b1\'ea\'c7\'a9\'c3\'fb\'a1\'af, **attrs)  \'b2\'e9\'d1\'af\'d6\'b8\'b6\'a8\'b5\'c4\'b1\'ea\'c7\'a9\'a3\'ac\'b7\'b5\'bb\'d8\'ca\'c7\'d5\'e2\'b8\'f6\'b1\'ea\'c7\'a9\'b5\'c4bs4.element.Tag\'b6\'d4\'cf\'f3 \
+				\'d7\'a2\'a3\'ba attrs\'ca\'f4\'d0\'d4\'d6\'d0\'a3\'ac\'b6\'d4\'d3\'da class\'d0\'e8\'d2\'aa\'d3\'c3\
+						 class_ = \'a1\'aexxx\'a1\'af\
+			5.2) \'cd\'a8\'b9\'fdfind()\'bb\'f1\'c8\'a1Tag\'b6\'d4\'cf\'f3\'d6\'ae\'ba\'f3\'a3\'ac\'d4\'d9\'cd\'a8\'b9\'fdTag\'b6\'d4\'cf\'f3\'a3\'ac\'bf\'c9\'d2\'d4\'bc\'cc\'d0\'f8\'b2\'e9\'d5\'d2\'cb\'fc\'b5\'c4\'d7\'d3\'cb\'ef\'bd\'da\'b5\'e3\'bb\'f2\'ce\'c4\'b1\'be\'bd\'da\'b5\'e3\'d2\'d4\'bc\'b0Tag\'b1\'ea\'c7\'a9\'d6\'d0\'b5\'c4\'ca\'f4\'d0\'d4\'a1\'a3\
+			 tag.text/string/contents   -> \'ce\'c4\'b1\'be\'bd\'da\'b5\'e3\
+			 tag.get(\'a1\'ae\'ca\'f4\'d0\'d4\'c3\'fb\'a1\'af)	 == tag.attrs.get(\'a1\'ae\'ca\'f4\'d0\'d4\'c3\'fb\'a1\'af)			 tag.next_sibling  \'cf\'c2\'d2\'bb\'b8\'f6\'d0\'d6\'b5\'dc\'b1\'ea\'c7\'a9\
+			 tag.next_siblings  \'ca\'a3\'d3\'e0\'cb\'f9\'d3\'d0\'b5\'c4\'d0\'d6\'b5\'dc\'b1\'ea\'c7\'a9 (generator[ NavigableString, Tag, None ])			 tag.children	  \'cb\'f9\'d3\'d0\'b5\'c4\'d7\'d3\'b1\'ea\'c7\'a9\
+			 tag.find(\'a1\'ae\'b1\'ea\'c7\'a9\'c3\'fb\'a1\'af, **attrs) \
+			 tag.find_all(\'a1\'ae\'b1\'ea\'c7\'a9\'c3\'fb\'a1\'af, **attrs)  \'b2\'e9\'d5\'d2tag\'cf\'c2\'b5\'c4\'cb\'f9\'d3\'d0\'d6\'b8\'b6\'a8\'b5\'c4\'d7\'d3\'b1\'ea\'c7\'a9\'a1\'a3\'b7\'b5\'bb\'d8\'ca\'c7\'d2\'bb\'b8\'f6\'bf\'c9\'b5\'fc\'b4\'fa\'b5\'c4\'c1\'d0\'b1\'ed\'a1\'a3\
+		\
+			5.3\'a3\'a9 select()\'d1\'a1\'d4\'f1\'c6\'f7 - CSS\'d1\'a1\'d4\'f1\'c6\'f7\
+					 select(\'a1\'aea\'a1\'af)  \'d1\'a1\'d4\'f1\'cb\'f9\'d3\'d0\'b5\'c4a\'b1\'ea\'c7\'a9, \'b7\'b5\'bb\'d8 list\
+					 select(\'a1\'ae.post-list\'a1\'af) \'d1\'a1\'d4\'f1\'cb\'f9\'d3\'d0class\'ce\'aapost-list\'b5\'c4\'b1\'ea\'c7\'a9\
+					 select(\'a1\'ae#author-primary\'a1\'af)  \'d1\'a1\'d4\'f1\'cb\'f9\'d3\'d0id\'ce\'aaauthor-primary\'b5\'c4\'b1\'ea\'c7\'a9\'a3\'ac\cf2 \ul \ulc2  \'b6\'d4\'d3\'daid\'b5\'c4\'b1\'ea\'c7\'a9\'d1\'a1\'d4\'f1\'a3\'ac\'bd\'a8\'d2\'e9\'ca\'b9\'d3\'c3find()\'b7\'bd\'b7\'a8\cf0 \ulnone \'a1\'a3\
+					\
+					select(\'a1\'aediv[class=post-list]\'a1\'af)  \'d1\'a1\'d4\'f1\'cb\'f9\'d3\'d0\'b5\'c4class\'ce\'aapost-list\'b5\'c4div\'b1\'ea\'c7\'a9\
+				    select(\'a1\'aeli > div\'a1\'af)  \'d1\'a1\'d4\'f1li\'b5\'c4\'d6\'b1\'bd\'d3\'d7\'d3\'b1\'ea\'c7\'a9div\
+					select(\'a1\'aea, img\'a1\'af)  \'d1\'a1\'d4\'f1\'cb\'f9\'d3\'d0\'b5\'c4a\'ba\'cdimg\'b1\'ea\'c7\'a9\
+					select(\'a1\'aeli a\'a1\'af)  \'d1\'a1\'d4\'f1li\'cf\'c2\'b5\'c4\'cb\'f9\'d3\'d0\'b5\'c4a\'b1\'ea\'c7\'a9\
+					\
+\
+\'bd\'f1\'cc\'ec\'b5\'c4\'c8\'ce\'ce\'f1:\
+	  1 selenium \'d7\'d4\'b6\'af\'bb\'af\'b9\'a4\'be\'df-\'b9\'a6\'c4\'dc\'d0\'d4\'b2\'e2\'ca\'d4\
+		 \'c5\'c0\'b3\'e6\'d6\'d0\'ca\'b9\'d3\'c3\'cb\'fc\'a3\'ac\'cd\'ea\'b3\'c9\'b6\'af\'cc\'acjs\'b5\'c4\'d2\'b3\'c3\'e6\'ca\'fd\'be\'dd\'c5\'c0\'c8\'a1\'a1\'a3\
+		 1) pip install selenium\
+		 2) \'cf\'c2\'d4\'d8\'d3\'ebchrome\'b0\'e6\'b1\'be\'b6\'d4\'d3\'a6\'b5\'c4chromdriver\'c7\'fd\'b6\'af\
+        3\'a3\'a9	from selenium import webdriver\
+		4) driver = webdriver.Chrome(executable_path=r\'a1\'afd:/chromdriver.exe\'a1\'af)\
+\
+		 5) driver.get(url)\
+		 6) driver.page_source   \'bb\'f1\'c8\'a1\'e4\'af\'c0\'c0\'c6\'f7\'b5\'c4\'cd\'f8\'d2\'b3\'d4\'b4\'c2\'eb\
+		 7) driver.find_element_by_id(\'a1\'ae\'a1\'af)  id\
+			 driver.find_elements_by_class_name(\'a1\'ae\'a1\'af) class\'d1\'f9\'ca\'bd\'c3\'fb\
+			 driver.find_elements_by_tag_name(\'a1\'ae\'a1\'af) \'b1\'ea\'c7\'a9\'c3\'fb\
+        8\'a3\'a9driver\'b2\'e9\'d1\'af\'d2\'bb\'b8\'f6\'d4\'aa\'cb\'d8\'b6\'d4\'cf\'f3\'ca\'b1\'a3\'acWebElement\'c0\'e0\'d0\'cd\
+            \'c8\'e7\'b9\'fb\'b2\'e9\'d1\'af\'ca\'c7\'b6\'e0\'b8\'f6\'d4\'aa\'cb\'d8\'a3\'ac\'d4\'f2\'ca\'c7list[WebElement]\
+\
+		 9) WebElement\'b6\'d4\'cf\'f3\'b7\'bd\'b7\'a8\'a3\'ba\
+			  find_element_by_id() \'d3\'eb driver.find_xx\'c0\'e0\'cb\'c6\'b5\'c4\
+			  click()  \'b5\'e3\'bb\'f7\'ca\'c2\'bc\'fe\
+			  send_keys(value)  # \'b2\'e9\'d5\'d2\'b5\'bdinput\'ce\'c4\'b1\'be\'b1\'ea\'c7\'a9\'ca\'b1\'a3\'ac\'bf\'c9\'d2\'d4\'c9\'e8\'d6\'c3\'c4\'da\'c8\'ddvalue\
+\
+		 10) driver.execute_script(js-script)\
+		 11) driver.close()\
+             driver.quit()  \'b9\'d8\'b1\'d5\'ba\'cd\'cd\'cb\'b3\'f6\'e4\'af\'c0\'c0\'c6\'f7\
+		\
+		12\'a3\'a9 driver.switch_to.frame(\'a1\'aeid|name\'a1\'af | frame_reference)\
+			  \'d6\'f7\'d2\'aa\'d3\'c3\'d3\'da\'cd\'f8\'d2\'b3\'d6\'d0\'b4\'e6\'d4\'da<iframe>\'c7\'e9\'bf\'f6\'ca\'b1\'ca\'b9\'d3\'c3\'a1\'a3\
+\
+	  2. requests\'c4\'a3\'bf\'e9  :  \
+		\'b7\'e2\'d7\'b0\'c1\'cburllib/urllib2/urllib3\'b5\'c8\'c4\'a3\'bf\'e9\'a3\'ac\'bc\'f2\'bb\'af\'c1\'cbHTTP\'b2\'d9\'d7\'f7\'a1\'a3\
+		\'d6\'a7\'b3\'d6 GET/POST/PUT/PATCH/DELETE/OPTINS\'b5\'c8\'c7\'eb\'c7\'f3\'b7\'bd\'b7\'a8\'a1\'a3\
+		  1) pip install requests  \'b0\'b2\'d7\'b0\
+		  2) import requests \
+         3) get/post\'b7\'bd\'b7\'a8\'b5\'c4\'c7\'eb\'c7\'f3\
+			  a)  requests.get(url, headers=\{\}, cookies=\{\}, proxies=\{\})\
+			  b)  requests.post(url, data=\{\}, json=\{\},\
+									    headers=\{\}, cookies=\{\}, proxies=\{\})\
+					\'d7\'a2\'a3\'ba post\'b7\'bd\'b7\'a8\'d6\'d0data\'ba\'cdjson\'d1\'a1\'d4\'f1\'d2\'bb\'cf\'ee\
+\
+		4\'a3\'a9\'c7\'eb\'c7\'f3\'cf\'ec\'d3\'a6\'b5\'c4\'b6\'d4\'cf\'f3 response\
+			  a) resp.status_code  \'d7\'b4\'cc\'ac\'c2\'eb\
+			  b) resp.headers \'cf\'ec\'d3\'a6\'cd\'b7 dict\
+			  c) resp.text \'cf\'ec\'d3\'a6\'b5\'c4\'ce\'c4\'b1\'be\'d0\'c5\'cf\'a2\'a3\'ac\'cd\'a8\'b9\'fdresp.encoding\'b5\'c4\'d7\'d6\'b7\'fb\'bc\'af\'bd\'f8\'d0\'d0\'bd\'e2\'c2\'eb\'b5\'c4text/*\'c0\'e0\'d0\'cd\'a1\'a3\
+			  d)  resp.json()  \'bb\'f1\'c8\'a1\'cf\'ec\'d3\'a6\'b5\'c4json\'ca\'fd\'be\'dd\'a3\'ac\'c8\'e7\'b9\'fbcontent-type\'ca\'c7application/json\'c0\'e0\'d0\'cd\'ca\'b1\'a3\'ac\'bf\'c9\'d2\'d4\'d6\'b1\'bd\'d3\'ca\'b9\'d3\'c3resp.json()\'a1\'a3\
+\
+		\
+	5\'a3\'a9 \'c6\'e4\'cb\'fc\'b5\'c4\'c7\'eb\'c7\'f3\'b7\'bd\'b7\'a8(PUT, PATCH, DELETE)\
+		  requests.request(\'a1\'aePUT\'a1\'af, url, data=\{\}, json=\{\}, \'a1\'ad)\
+		  \'c6\'e4\'ca\'b5get()\'ba\'cdpost()\'b7\'bd\'b7\'a8\'b5\'c4\'b2\'ce\'ca\'fd\'b6\'bc\'ca\'c7\'b2\'ce\'bf\'bcrequest()\'b5\'c4\'a1\'a3\
+						\
+	  3.  scrapy\'bf\'f2\'bc\'dc\'bc\'f2\'b5\'a5\'d3\'a6\'d3\'c3\
+      	   scrapy \'ca\'c7\'d3\'c9Twisted\'bf\'aa\'b7\'a2\'b5\'c4\'d2\'bb\'d5\'fb\'cc\'d7\'c5\'c0\'b3\'e6\'bf\'f2\'bc\'dc\'a3\'ac \'b0\'fc\'c0\'a8\'c5\'c0\'b3\'e6\'c0\'e0\'a1\'a2\'ba\'cb\'d0\'c4\'d2\'fd\'c7\'e6\'a1\'a2\'cf\'c2\'d4\'d8\'c6\'f7\'a1\'a2\'cf\'c2\'d4\'d8\'d6\'d0\'bc\'e4\'bc\'fe\'a1\'a2\'c8\'ce\'ce\'f1\'b6\'d3\'c1\'d0\'a1\'a2\'b9\'dc\'b5\'c0pipeline\'b5\'c8\'d7\'e9\'bc\'fe\'a1\'a3\
+\
+			1\'a3\'a9 \'b0\'b2\'d7\'b0scrapy\'bb\'b7\'be\'b3  -> python3.6\
+\
+				mac/linux:\
+			       pip install scrapy\
+\
+			   window:\
+ 					Twisted\
+						->  pip install  d:/Twisted-*-win_amd64.whl\
+					win32\
+						-> \'cb\'ab\'bb\'f7*.exe \'d6\'b1\'bd\'d3\'b0\'b2\'d7\'b0\
+					   \'bb\'f2	-> win32-***-.whl  \'b0\'b2\'d7\'b0\
+					   \'bb\'f2 -> pip install pywin32\
+					scrapy\
+						-> pip install scrapy\
+\
+		 scrapy\'b5\'c4\'d6\'d0\'ce\'c4\'ce\'c4\'b5\'b5\'a3\'ba\
+		https://scrapy-chs.readthedocs.io/zh_CN/0.24/topics/request-response.html\
+	}
