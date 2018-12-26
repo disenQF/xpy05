@@ -26,14 +26,15 @@ class BaseDao():
         return False
 
     def __create_table(self, table_name, field_names, field_values):
+        print(field_names, field_values)
         cursor: Cursor = self.db.conn.cursor()
         sql = 'create table %s (%s)'  # name varchar
         fields = ''
-        for index, field_name in enumerate(field_names):
+        for index, field_name in enumerate(field_names.split(',')):
+            print(index, field_name)
             fields += '%s %s,' %(field_name,
-                                 self.__get_db_type(field_values[index-1]))
+                                 self.__get_db_type(field_values[index]))
         print(sql % (table_name,  fields[:-1]))
-
 
     def __get_db_type(self, value):
         if isinstance(value, str):
