@@ -1,6 +1,7 @@
 """
 实现数据库连接的管理器
 """
+from pymysql import Connect
 
 class DB:
     def __init__(self, **kwargs):
@@ -13,13 +14,19 @@ class DB:
         self.charset = kwargs.get('charset', 'utf8')
 
     def connect(self):
-        pass
+        # 从连接池中获取数据连接
+        self.conn = Connect(host=self.host,
+                            port=self.port,
+                            user=self.username,
+                            password=self.password,
+                            db=self.db,
+                            charset=self.charset)
 
     def close(self):
-        pass
+        self.conn.close()
 
     def __enter__(self):
-        pass
+        self.connect()  # 连接数据库
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        pass
+        self.close()
