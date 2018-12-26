@@ -13,8 +13,6 @@ class GndySpider(scrapy.Spider):
         base_href = 'https://www.dytt8.net/html/gndy/dyzz/'
         next_a = base_href + response.css('.x').xpath('.//a/@href').extract()[-2]
 
-        print(next_a)
-
         # response.css() 返回SelectorList->可迭代
         # SelectorList.xpath()  -> Selector(xpath, data)
         #             .css()
@@ -28,14 +26,27 @@ class GndySpider(scrapy.Spider):
                           callback=self.parse_info,
                           meta={'title': title})
 
-    def parse_info(self,response):
+        # 下一页数据
+        if next_a:
+            yield Request(next_a)
+
+    def parse_info(self, response):
+        data = {}
         texts = response.css('#Zoom p::text').extract()
-        # 处理数据，提取各个特征字段
+        if texts:
+            # 处理数据，提取各个特征字段
+            data['name'] = texts[0]
+            data['zh_name'] = texts[2]
+            data['en_name'] = texts[3]
+            data['year'] = texts[4]
+            data['location'] = texts[5]
+            data['lb'] = texts[6]
 
-        imgs = response.css('#Zoom img::attr(src)').extract()
-        # 处理图片数据，第一个是海报， 第二个电影情节截图
+            data['imgs'] = response.css('#Zoom img::attr(src)').extract()
+            # 处理图片数据，第一个是海报， 第二个电影情节截图
 
-        # 视频的下载地址
-        video_ftp = response.xpath('//td[@style="WORD-WRAP: break-word"]/a/text()').extract()[0]
+            # 视频的下载地址
+            data['video_ftp'] = response.xpath('//td[@style="WORD-WRAP: break-word"]/a/text()').extract()[0]
 
+            return data
 
