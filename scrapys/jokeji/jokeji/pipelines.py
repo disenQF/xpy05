@@ -8,4 +8,5 @@
 
 class JokejiPipeline(object):
     def process_item(self, item, spider):
+        # 处理数据 item -> dict
         return item
