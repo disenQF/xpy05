@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for jokeji project
+# Scrapy settings for dytt project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'jokeji'
+BOT_NAME = 'dytt'
 
-SPIDER_MODULES = ['jokeji.spiders']
-NEWSPIDER_MODULE = 'jokeji.spiders'
+SPIDER_MODULES = ['dytt.spiders']
+NEWSPIDER_MODULE = 'dytt.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'jokeji (+http://www.yourdomain.com)'
+#USER_AGENT = 'dytt (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -27,7 +27,7 @@ ROBOTSTXT_OBEY = True
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 5
+#DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -47,13 +47,13 @@ DOWNLOAD_DELAY = 5
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'jokeji.middlewares.JokejiSpiderMiddleware': 543,
+#    'dytt.middlewares.DyttSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'jokeji.middlewares.JokejiDownloaderMiddleware': 543,
+#    'dytt.middlewares.DyttDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,7 +65,7 @@ DOWNLOAD_DELAY = 5
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'jokeji.pipelines.JokejiPipeline': 300,
+#    'dytt.pipelines.DyttPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)

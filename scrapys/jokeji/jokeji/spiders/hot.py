@@ -29,9 +29,9 @@ class HotSpider(scrapy.Spider):
 
             # 下一页请求
             # for page in re.findall(r'<a href="hot.asp\?me_page=(\d+?)">', response.text):
-            # for page in range(2, 400):
-            #     next_page = 'http://www.jokeji.cn/hot.asp?me_page=%s' % page
-            #     yield Request(next_page, callback=self.parse)
+            for page in range(2, 400):
+                next_page = 'http://www.jokeji.cn/hot.asp?me_page=%s' % page
+                yield Request(next_page, callback=self.parse)
 
     def parse_content(self, response: Response):
         if response.status == 200:
