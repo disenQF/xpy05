@@ -119,6 +119,18 @@ class TestLogger(TestCase):
         logger.error('hi, error',  extra=extra_info)
         logger.critical('hi, critical', extra=extra_info)
 
+    def test5(self):
+        # 默认的StreamHandler的Level是WARNING
+        a = logging.getLogger('aaa')
+        a.setLevel(logging.INFO)
+
+        a.addHandler(logging.StreamHandler())
+        a.handlers[0].setLevel(logging.INFO)
+
+        a.info('---hi info---')
+        a.warning('----hi, warning---')
+        a.error('--hi, error----')
+        a.critical('-hi, critical--')
 
 
 
