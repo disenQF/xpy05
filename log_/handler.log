@@ -1,0 +1,13 @@
+[ 2018-12-27 16:02:11 ]-WARNING: hi, warning
+[ 2018-12-27 16:17:12 ]-WARNING: hi, warning
+[ 2018-12-27 16:17:12 ]-ERROR: hi, error
+[ 2018-12-27 16:17:43 ]-WARNING: hi, warning
+[ 2018-12-27 16:17:43 ]-ERROR: hi, error
+[ 2018-12-27 16:20:36 ]-WARNING: hi, warning
+[ 2018-12-27 16:20:36 ]-ERROR: hi, error
+< 1000001 >[ 2018-12-27 16:31:13 ]-WARNING: hi, warning
+< 1000001 >[ 2018-12-27 16:31:13 ]-ERROR: hi, error
+< 1000001 >[ 2018-12-27 16:31:55 ]-WARNING: hi, warning
+< 1000001 >[ 2018-12-27 16:31:55 ]-ERROR: hi, error
+< 1000001 >[ 2018-12-27 16:33:13 ]-WARNING: hi, warning
+< 1000001 >[ 2018-12-27 16:33:13 ]-ERROR: hi, error
