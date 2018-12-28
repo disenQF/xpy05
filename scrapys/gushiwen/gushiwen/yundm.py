@@ -5,16 +5,13 @@ import http.client, mimetypes, urllib, json, time, requests
 
 class YDMHttp:
     apiurl = 'http://api.yundama.com/api.php'
-    username = ''
-    password = ''
-    appid = ''
-    appkey = ''
+    username = 'disen_normal'
+    password = 'disen8888'
+    appid = '5100'
+    appkey = '2a05b965cea25e3a378bc2955c4756a5'
 
-    def __init__(self, username, password, appid, appkey):
-        self.username = username
-        self.password = password
-        self.appid = str(appid)
-        self.appkey = appkey
+    def __init__(self):
+        pass
 
     def request(self, fields, files=[]):
         response = self.post_url(self.apiurl, fields, files)
