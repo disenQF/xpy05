@@ -71,6 +71,8 @@ class DushuDownloaderMiddleware(object):
     def process_request(self, request, spider):
         # Called for each request that goes through the downloader
         # middleware.
+        # request.meta['proxy'] = 'http://10.12.133.11:9999'
+        # request.headers = {}
 
         # Must either:
         # - return None: continue processing this request

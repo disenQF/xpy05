@@ -5,14 +5,14 @@ import requests
 import scrapy
 from requests import get
 from requests.cookies import RequestsCookieJar
-from scrapy import FormRequest
+from scrapy import FormRequest, Request
 
 from gushiwen import yundm
 
 
 class ShiwenSpider(scrapy.Spider):
     name = 'shiwen'
-    allowed_domains = ['www.gushiwen.org', 'so.gushiwen.org']
+    allowed_domains = ['www.gushiwen.org', 'so.gushiwen.org', 'ip.cn', 'ip.tool.chinaz.com']
 
     def start_requests(self):
 
@@ -67,5 +67,22 @@ class ShiwenSpider(scrapy.Spider):
             return self.start_requests()
         else:
             print('-------登录成功--------')
-            print(response.text)
             print(response.url)
+            titles = response.xpath('//div[@class="cont"]/p[1]/a/b/text()').extract()
+            print('我的收藏: ', titles)
+
+        yield Request('http://ip.tool.chinaz.com', callback=self.parse_cz)
+        yield Request('https://ip.cn', callback=self.parse_ip_cn)
+
+
+    def parse_cz(self, response):
+        proxy_ip = response.xpath('//dd[@class="fz24"]/text()').extract()
+        print(response.url, '---代理的ip->', proxy_ip)
+        print('设置的代理ip', response.meta['proxy'])
+        print(response.headers)
+        print(response.url, '---ua->', response.request.headers.get('User-Agent'))
+
+    def parse_ip_cn(self, response):
+        proxy_ip = response.xpath('//div[@class="well"]/p[1]/code/text()').extract()
+        print(response.url, '---代理的ip->', proxy_ip)
+        print(response.url, '---ua->', response.request.headers.get('User-Agent'))

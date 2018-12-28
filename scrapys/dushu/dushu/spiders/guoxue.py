@@ -14,7 +14,8 @@ class GuoxueSpider(CrawlSpider):
         #          False，则在解析之后，不再继续提取
         # Rule()可以不用设置callback, 表示只提取连接(parse)，不解析下载后的数据
         Rule(LinkExtractor(allow=r'/guoxue/\d+/'), callback='parse_item', follow=False),
-        # Rule(LinkExtractor(restrict_css='.pages'), follow=True)
+        Rule(LinkExtractor(restrict_css='.pages'), follow=True),
+        Rule(LinkExtractor(r'https://www.dushu.com/guoxue/\d+\.html'), follow=True)
     )
 
     def parse_item(self, response):

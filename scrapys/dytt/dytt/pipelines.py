@@ -37,5 +37,7 @@ class DyttPipeline(object):
         else:
             print(f'{item.get("name")} 已存在')
 
+        return item
+
     def __del__(self):
         self.dao.db.close()

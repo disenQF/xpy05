@@ -8,6 +8,7 @@
 #     https://doc.scrapy.org/en/latest/topics/settings.html
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
+import logging
 
 BOT_NAME = 'dushu'
 
@@ -20,6 +21,9 @@ NEWSPIDER_MODULE = 'dushu.spiders'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
+
+LOG_LEVEL= 'DEBUG'
+LOG_FILE = 'dushu.log'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32

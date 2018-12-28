@@ -7,6 +7,9 @@
 
 from scrapy import signals
 
+from ip_proxy.proxy import random_proxy
+from ip_proxy.user_agents import random_ua
+
 
 class GushiwenSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
@@ -71,6 +74,9 @@ class GushiwenDownloaderMiddleware(object):
     def process_request(self, request, spider):
         # Called for each request that goes through the downloader
         # middleware.
+        # 设置请求的ip代理 和 User-Agent
+        request.meta['proxy'] = random_proxy()
+        request.headers['User-Agent'] = random_ua()
 
         # Must either:
         # - return None: continue processing this request
