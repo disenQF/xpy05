@@ -7,8 +7,9 @@
 
 from scrapy import signals
 
-from ip_proxy.proxy import random_proxy
+from ip_proxy.proxy import random_http_proxy, random_https_proxy
 from ip_proxy.user_agents import random_ua
+from ip_proxy import proxy
 
 
 class GushiwenSpiderMiddleware(object):
@@ -75,7 +76,11 @@ class GushiwenDownloaderMiddleware(object):
         # Called for each request that goes through the downloader
         # middleware.
         # 设置请求的ip代理 和 User-Agent
-        request.meta['proxy'] = random_proxy()
+        if request.url.startswith('https://'):
+            request.meta['proxy'] = random_https_proxy()
+        else:
+            request.meta['proxy'] = random_http_proxy()
+
         request.headers['User-Agent'] = random_ua()
 
         # Must either:
@@ -106,4 +111,5 @@ class GushiwenDownloaderMiddleware(object):
         pass
 
     def spider_opened(self, spider):
+        proxy.test_proxy()  # 验证
         spider.logger.info('Spider opened: %s' % spider.name)

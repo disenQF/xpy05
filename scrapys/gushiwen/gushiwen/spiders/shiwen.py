@@ -74,7 +74,6 @@ class ShiwenSpider(scrapy.Spider):
         yield Request('http://ip.tool.chinaz.com', callback=self.parse_cz)
         yield Request('https://ip.cn', callback=self.parse_ip_cn)
 
-
     def parse_cz(self, response):
         proxy_ip = response.xpath('//dd[@class="fz24"]/text()').extract()
         print(response.url, '---代理的ip->', proxy_ip)

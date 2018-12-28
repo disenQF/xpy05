@@ -41,4 +41,4 @@ MY_USER_AGENT = [
 
 
 def random_ua():
-    random.choice(MY_USER_AGENT)
+    return random.choice(MY_USER_AGENT)
