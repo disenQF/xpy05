@@ -30,9 +30,26 @@ SCHEDULER_PERSIST = True
 
 
 # 配置Redis连接信息 redis_url -> redis://:password@ip:port/1
-REDIS_HOST = '127.0.0.1'
-REDIS_PORT = 6379  # db 默认在0库
-# REDIS_PARAMS = {'password': ''} 配置口令
+"""
+ REDIS_URL : str, optional
+        Server connection URL.
+    REDIS_HOST : str, optional
+        Server host.
+    REDIS_PORT : str, optional
+        Server port.
+    REDIS_ENCODING : str, optional
+        Data encoding.
+    REDIS_PARAMS : dict, optional
+        Additional client parameters.
+"""
+# REDIS_HOST = '127.0.0.1'
+# REDIS_PORT = 6379  # db 默认在0库
+# REDIS_PARAMS = {
+#     #'password': '',
+#     'db': 8
+# }  # 配置口令
+
+REDIS_URL = 'redis://127.0.0.1:6379/7'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
